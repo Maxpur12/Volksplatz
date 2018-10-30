@@ -1,5 +1,5 @@
 <?php
-require '../db/db.php';
+require_once '../db/db.php';
 session_start();
 
 if(isset($_GET['login'])){
@@ -12,6 +12,8 @@ if(isset($_GET['login'])){
 
     if($user !== false && password_verify($passwort, $user['passwort'])){
         $_SESSION['userid'] = $user['id'];
+        header("HTTP/1.1 301 Moved Permanently");
+        header('Location:../index.php');
         die('Login erfolgreich! Weiter zu <a href="../index.php"> intern');
     } else{
         $errorMessage = "E-Mail oder Passwort war ungültig <br>";

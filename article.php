@@ -1,5 +1,5 @@
 <?php
-require 'db/db.php';
+require_once 'db/db.php';
 
 session_start();
 if(!isset($_SESSION['userid'])) {
@@ -16,7 +16,7 @@ if(isset($_GET['name'])){
 //echo $article;
 
 $button_status = $_POST['submit'];
-$button_logout = $_POST['logout'];
+
 if($button_status){  //Wenn Button gedrückt
     $text = $_POST['article']; //Übernehme den Text aus dem Textfeld "article"
     $sql = $db->prepare("INSERT INTO beitrag (B_ID,Kategorie_ID,Text) VALUES (NULL,NULL,?)");
@@ -35,10 +35,7 @@ if($button_status){  //Wenn Button gedrückt
   
 }
 
-if($button_logout){
-    session_destroy();
-    echo "Ausgeloggt";
-}
+
 /**
  * Funktion um die B_ID eines Beitrages in einer Datenbank herauszufinden
  * $beitrag = Text der in der Datenbank gesucht werden soll

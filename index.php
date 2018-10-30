@@ -12,7 +12,7 @@ tinymce.init({
 <body>
 <?php 
 error_reporting(E_ALL);
-require 'db/db.php';
+require_once 'db/db.php';
 
 echo "Hello World <br>";
 
@@ -25,11 +25,11 @@ echo "Hello World <br>";
 <br>
 
 <INPUT TYPE="submit" id="submit" NAME="submit" VALUE="submit">  <!-- onclick="update_text(article.value)" -->
-<INPUT TYPE="button" NAME="logout" VALUE="logout">
-
 </form>
 
-
+<form action="admin/logout.php" method="post">
+<INPUT TYPE="submit" ID="logout" NAME="logout" VALUE="logout">
+</form>
 <p id="update_text"> </p>
 
 

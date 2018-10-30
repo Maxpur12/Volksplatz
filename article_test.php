@@ -1,5 +1,5 @@
 <?php
-require 'db/db.php';
+require_once 'db/db.php';
 
 
 ?>
