@@ -20,31 +20,17 @@ echo "Hello World <br>";
 
 
 
-<form action="article.php" method="post">
+<!-- <form action="article.php" method="post"> 
 <textarea id="article" NAME="article"> Hello World!</textarea> 
 <br>
 
-<INPUT TYPE="submit" id="submit" NAME="submit" VALUE="submit">  <!-- onclick="update_text(article.value)" -->
+<INPUT TYPE="submit" id="submit" NAME="submit" VALUE="submit">  onclick="update_text(article.value)" 
 </form>
 
 <form action="admin/logout.php" method="post">
 <INPUT TYPE="submit" ID="logout" NAME="logout" VALUE="logout">
 </form>
-<p id="update_text"> </p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+-->
 
 <script type="text/javascript">
 

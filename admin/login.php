@@ -13,7 +13,7 @@ if(isset($_GET['login'])){
     if($user !== false && password_verify($passwort, $user['passwort'])){
         $_SESSION['userid'] = $user['id'];
         header("HTTP/1.1 301 Moved Permanently");
-        header('Location:../index.php');
+        header('Location:post.php');
         die('Login erfolgreich! Weiter zu <a href="../index.php"> intern');
     } else{
         $errorMessage = "E-Mail oder Passwort war ungültig <br>";
@@ -27,6 +27,8 @@ if(isset($_GET['login'])){
 <?php
 if(isset($errorMessage)){
     echo $errorMessage;
+    header("HTTP/1.1 301 Moved Permanently");
+    header('Location:login.php');
 }
 ?>
 
