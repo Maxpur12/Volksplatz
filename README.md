@@ -4,8 +4,8 @@ Website for a society.
 Todo:
 <p> 
   - implementierung der Beiträge /Bearbeiten funktion/Löschen funktion funktion (3.-9. Dezember) <br> 
-  - implementierung der Seitenanzahl (3.-9. Dezember) <b>Done</b><br>
-  - implementieren von "Foto hochladen" Funktion (3.-9. Dezember) <br>
+  - implementierung der Seitenanzahl (3.-9. Dezember)<br>
+  - implementieren von "Foto hochladen" Funktion (3.-9. Dezember)  <b>Done</b> <br>
   - Entwickeln der Suche / implementieren <br> (10.-16. Dezember) <br>
   - entwickeln des Veranstaltungskalenders / implementieren (17.-23. Dezember) <br>
   - Backend fertig machen (17.-23. Dezember) <br>
