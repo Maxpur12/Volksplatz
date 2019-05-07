@@ -1,5 +1,6 @@
 <?php
-require_once '../db/db.php';
+require_once 'db/db.php';
+//require_once '../db/db.php';
 
 class menuItem{
 
@@ -29,7 +30,7 @@ private $rank; //Rang des Menüs; In welcher Reihenfolge die Menüpunkte auftauc
     public function insertMenuItem($db){
         $sql = $db->prepare("INSERT INTO menu (M_ID,M_Name,M_SubMenu,M_Rank) VALUES (NULL,?,?,?)");
         $sql->execute(array($this->name,$this->sub_menu,$this->rank)) or die("Fehler insertMenuItem()");
-        echo "Eingabe erfolgreich";
+      //  echo "Eingabe erfolgreich";
     }
     /**
      * Rang eines MenuItems bekommen
@@ -44,7 +45,7 @@ private $rank; //Rang des Menüs; In welcher Reihenfolge die Menüpunkte auftauc
      */
     public function checkRank($menuItem1, $menuItem2){
             if ($menuItem1 == $menuItem2){
-                die("Fehler: Rank zwischen $menuItem1 und $menuItem2 ist gleich!");
+               // die("Fehler: Rank zwischen $menuItem1 und $menuItem2 ist gleich!");
             }
     }
 

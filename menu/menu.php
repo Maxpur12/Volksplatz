@@ -1,7 +1,8 @@
 <?php
 
 require_once 'menuItem.php';
-require_once '../db/db.php';
+//require_once '../db/db.php';
+require_once 'db/db.php';
 
 
 $name = "Startseite";
@@ -12,12 +13,12 @@ $rank = 0;
 $menu->insertMenuItem($db);
 */
 
-
-$menuItem = new menuItem($name,$sub_menu,$rank);
+/*
+menuItem = new menuItem($name,$sub_menu,$rank);
 rank($db, $menuItem, $rank);
 $menuItem->insertMenuItem($db);
 
-
+*/
 
 
 loadMenu($db);
@@ -33,14 +34,17 @@ $sql_abfrage->execute() or die("Fehler: loadMenu()");
 while($row = $sql_abfrage->fetch()){
     $erg = $row['M_Name'];
     $erg2 = $row['M_Rank'];
-    echo "<br>".$erg." ".$erg2;
-    
+    //Todo: If statement dropdown
+   // echo "<br>".$erg." ".$erg2;
+    echo '<li class="nav-item">';
+    echo '<a class="nav-link" href="#">'.$erg.'</a>';
+    echo '</li>';
 }
 }
 /**
  * Auslesen der Menüpunkte in der Datenbank
  * Vergleichen mit eingegebenen MenüItem; wenn Rang gleich, dann kein Eintrag
- * $database = Datenbenk (indb/db.php)
+ * $database = Datenbank (in db/db.php)
  * $rankItem = eingegebenes MenüItem / Name des MenüPunktes
  * $rank = eingegebener Rang des $rankItem
  */

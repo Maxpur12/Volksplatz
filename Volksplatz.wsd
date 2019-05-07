@@ -1,0 +1,5 @@
+@startuml
+title Volksplatz
+index .> menu : Menü einbinden
+
+@enduml

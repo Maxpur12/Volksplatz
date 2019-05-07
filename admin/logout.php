@@ -2,7 +2,7 @@
 require_once '../db/db.php';
 session_start();
 if(!isset($_SESSION['userid'])) {
-    die('Bitte zuerst <a href="admin/login.php">einloggen</a>');
+    die('Bitte zuerst <a href="login.php">einloggen</a>');
 }
 $button_logout = $_POST['logout'];
 if($button_logout){

@@ -2,7 +2,7 @@
 <html>
 <head>
 <script src="../tinymce/tinymce.min.js" ></script>
-<script >
+<script>
 tinymce.init({
     mode: 'textareas'
     
@@ -39,7 +39,8 @@ if(!isset($_SESSION['userid'])) {
 <textarea id="article" NAME="article"> </textarea>  <!-- Get Text aus Beitrag importieren-->
 <br>
 <p> Bilder einfügen: </p>
-<input type="file" name="fileToUpload" id="fileToUpload">
+<!--<input type="file" name="fileToUpload" id="fileToUpload"> -->
+<input name="fileToUpload[]" type="file" multiple="multiple" />
 
 <INPUT TYPE="submit" id="submit" NAME="submit" VALUE="submit">  <!-- onclick="update_text(article.value)" -->
 </form>

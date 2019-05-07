@@ -19,18 +19,14 @@ if(isset($_GET['name'])){
 //echo $article;
 
 $button_status = $_POST['submit'];
-
 if($button_status){  //Wenn Button gedrückt
     $text = utf8_encode($_POST['article']); //Übernehme den Text aus dem Textfeld "article"
     $headline = utf8_encode($_POST['head']);
     $preview = utf8_encode($_POST['preview']);
-    $picture = $_FILES['fileToUpload']['name'];
-    $picture_tmp = $_FILES['fileToUpload']['tmp_name'];
-    
+    //Anzahl der hochzuladenen Bilder
+   $total_pics = count($_FILES['fileToUpload']['name']);
 
-    $upload = new upload($picture, $picture_tmp);
-    $upload->picUpload($picture, $picture_tmp);
-    //Todo: Ergänzen um $headline
+     //Todo: Ergänzen um $headline
     //Todo: Ergänzen um $preview 
     
     //Todo: Schleife Anfang?
@@ -38,6 +34,38 @@ if($button_status){  //Wenn Button gedrückt
     $sql->execute(array($text,$headline,$preview)) or die("irgendetwas doofes ist passiert");
     echo 'Eingabe erfolgreich <br>';
     //Todo: Schleife ende
+
+    $id = $db->lastInsertID();
+   //echo $id;
+    echo $total_pics;
+   
+    //Anzahl der Bilder noch in Variable ablegen
+    for($i=0; $i < $total_pics; $i++){
+        $picture = $_FILES['fileToUpload']['name'][$i];
+        $picture_tmp = $_FILES['fileToUpload']['tmp_name'][$i];
+        
+    
+      
+        try{
+            $upload = new upload($picture, $picture_tmp);
+            $upload->picUpload($picture, $picture_tmp);
+            $sql = $db->prepare("INSERT INTO pictures (P_ID,B_ID,p_name) VALUES (NULL,?,?)");
+            $sql->execute(array($id, $picture));
+            echo "Eintrag erfolgreich <br>";
+            
+        }
+        catch(Exception $e){
+            die($e->getMessage());
+           
+        }
+       
+        //SQL Bildeintrag
+        //ToDo: Bild Tabelle anlegen
+    }
+    sleep(3);
+    header("HTTP/1.1 301 Moved Permanently");
+    header('Location:index.php');
+   
     
     /*
     $sql_beitrag = get_B_ID($text,$db); //Beitrag ID Finden mitteld get_b_ID(); mysqli_fetch_row() wandelt mysqli_result object in Array um;

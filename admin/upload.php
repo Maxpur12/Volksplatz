@@ -1,5 +1,6 @@
 <?php
 require_once 'article.php';
+require_once '../db/db.php';
 
 class upload{
 
@@ -31,30 +32,33 @@ else{
 
 
 if(file_exists($target_file)){
-    echo "Datei existiert schon.";
+    echo "Datei existiert schon. <br>";
     $uploadOk = 0;
 }
 
 if ($picture_tmp > 5000000){ //5MB
-echo "Die Datei ist zu groß.";
+echo "Die Datei ist zu groß. <br>";
 $uploadOk = 0;
 }
 
 if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif"){
-    echo "Nur JPG, JPEG, PNG & GIF Dateien sind erlaubt";
+    echo "Nur JPG, JPEG, PNG & GIF Dateien sind erlaubt <br>";
     $uploadOk = 0;
 }
 
 if($uploadOk == 0){
-    echo "Datei konte nicht hochgeladen werden!";
-
+    echo "Datei konte nicht hochgeladen werden! <br>";
+    die();
 } else{
     if(move_uploaded_file($picture_tmp, $target_file)){
-        echo "Die Datei " . basename($picture). " wurde hochgeladen.";
+        echo "Die Datei " . basename($picture). " wurde hochgeladen. <br>";
+    
+        
 
     }
     else{
-        echo "Beim Upload gab es einen Fehler!";
+        echo "Beim Upload gab es einen Fehler! <br>";
+        die();
     }
 }
 

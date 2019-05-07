@@ -1,3 +1,5 @@
+
+<!--
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,5 +16,19 @@
   <form method="post">
     <textarea id="article">Hello, World!</textarea>
   </form>
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="refresh" content="5; URL=https://google.de">
+
+
+</head>
+
+<body>
+<p>Sie werden in 5 Sekunden weitergeleitet! </p>
 </body>
 </html>

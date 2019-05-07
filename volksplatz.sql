@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 30. Okt 2018 um 16:24
+-- Erstellungszeit: 09. Jan 2019 um 12:01
 -- Server-Version: 10.1.34-MariaDB
 -- PHP-Version: 7.2.8
 
@@ -31,34 +31,42 @@ SET time_zone = "+00:00";
 CREATE TABLE `beitrag` (
   `B_ID` int(11) NOT NULL,
   `Kategorie_ID` int(11) DEFAULT NULL,
-  `Text` text COLLATE latin1_german1_ci NOT NULL
+  `Text` text CHARACTER SET utf8 COLLATE utf8_german2_ci NOT NULL,
+  `Headline` varchar(100) CHARACTER SET utf8 COLLATE utf8_german2_ci NOT NULL,
+  `Preview` varchar(250) CHARACTER SET utf8 COLLATE utf8_german2_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_german1_ci;
 
 --
 -- Daten für Tabelle `beitrag`
 --
 
-INSERT INTO `beitrag` (`B_ID`, `Kategorie_ID`, `Text`) VALUES
-(1, NULL, '<p>Hello World!</p>'),
-(2, NULL, '<p>Hello World!</p>'),
-(3, NULL, '<p>Hello World!</p>'),
-(4, NULL, '<p>Hello World!asdasd</p>'),
-(5, NULL, '<p>Hello World!asdasdasdasd</p>'),
-(6, NULL, '<p>Hello World!asdasdasdasd</p>'),
-(7, NULL, '<p>Hello World!asdasdasdasd</p>'),
-(8, NULL, '<p>Hello World!asdasdasdasd</p>'),
-(9, NULL, '<p>Hello World!asdasdasdasd</p>'),
-(10, NULL, '<p>Hello World!asdasdasdasd</p>'),
-(11, NULL, '<p>Hello World!asdasdasdasd</p>'),
-(12, NULL, '<p>Hello World!asdasdasdasd</p>'),
-(13, NULL, '<p>Hello World!asdasdasdasd&nbsp; &nbsp; &nbsp;asdasdad</p>'),
-(14, NULL, '<p>Hello World!asdasdasdasd&nbsp; &nbsp; &nbsp;asdasdadssasdasdasd</p>'),
-(15, NULL, '<p>Hello World!asdasdasdasd&nbsp; &nbsp; &nbsp;asdasdadssasdasdasdasdads</p>'),
-(16, NULL, '<p>Hello World!asdasdasdasd&nbsp; &nbsp; &nbsp;asdasdadssasdasdasdasdadssadads ad</p>'),
-(17, NULL, '<p>Hello World!asdasdasdasd&nbsp; &nbsp; &nbsp;asdasdadssasdasdasdasdadssadads ad</p>'),
-(18, NULL, '<p>Hello World!asdasdasdasd&nbsp; &nbsp; &nbsp;asdasdadssasdasdasdasdadssadads ad</p>'),
-(19, NULL, '<p>Hello World! asddddddddddddddddddddddddddddddd</p>'),
-(20, NULL, '<p>Hello World!</p>');
+INSERT INTO `beitrag` (`B_ID`, `Kategorie_ID`, `Text`, `Headline`, `Preview`) VALUES
+(22, NULL, '<p>Inhalt</p>', '<p>&Uuml;berschrift</p>', '<p>Vorschau</p>'),
+(23, NULL, '<p>Inhalt</p>', '<p>&Uuml;berschrift</p>', '<p>Vorschau</p>'),
+(24, NULL, '<p>Inhalt</p>', '<p>&Uuml;berschrift</p>', '<p>Vorschau</p>'),
+(25, NULL, '<p>Inhalt</p>', '<p>&Uuml;berschrift</p>', '<p>Vorschau</p>'),
+(26, NULL, '<p>Inhalt</p>', '<p>&Uuml;berschrift&nbsp; &szlig;</p>', '<p>Vorschau</p>'),
+(27, NULL, '', '', ''),
+(28, NULL, '', '', ''),
+(29, NULL, '', '', ''),
+(30, NULL, '', '', ''),
+(31, NULL, '', '', ''),
+(32, NULL, '', '', ''),
+(33, NULL, '', '', ''),
+(34, NULL, '', '', ''),
+(35, NULL, '', '', ''),
+(36, NULL, '', '', ''),
+(37, NULL, '', '', ''),
+(38, NULL, '', '', ''),
+(39, NULL, '', '', ''),
+(40, NULL, '', '', ''),
+(41, NULL, '', '', ''),
+(42, NULL, '', '', ''),
+(43, NULL, '', '', ''),
+(44, NULL, '', '', ''),
+(45, NULL, '', '', ''),
+(46, NULL, '', '', ''),
+(47, NULL, '', '', '');
 
 -- --------------------------------------------------------
 
@@ -137,7 +145,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT für Tabelle `beitrag`
 --
 ALTER TABLE `beitrag`
-  MODIFY `B_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `B_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT für Tabelle `menu`
