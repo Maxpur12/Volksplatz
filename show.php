@@ -2,7 +2,7 @@
 //require_once '../db/db.php';
 require_once 'db/db.php';
 require_once 'page_scroling.php';
-
+//Als Funktion schreiben
 $sql = $db->prepare("SELECT MAX(B_ID) from beitrag");
 $sql->execute() or die("fehler");
     
@@ -21,7 +21,7 @@ $result_per_site = 3;
 
 
   //  echo "<p>".$sql_erg."</p>";
-
+/*
     for($i=1; $i <= $sql_erg; $i++){
         $sql = $db->prepare("SELECT B_ID,Headline,Preview from beitrag where B_ID = ?");
         
@@ -48,7 +48,7 @@ $result_per_site = 3;
      
 
     }
-
+*/
     $total_pages = ceil($total_post/$result_per_site); //Anzahl der gesamten Seiten
     //$total_pages = 10;
     if (empty($_GET['seite_nr'])) {

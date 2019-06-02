@@ -2,7 +2,7 @@
 //require_once '../db/db.php';
 require_once 'db/db.php';
 require_once 'page_scroling.php';
-
+//Als Funktion schreiben.
 $sql = $db->prepare("SELECT MAX(B_ID) from beitrag");
 $sql->execute() or die("fehler");
     
