@@ -15,9 +15,10 @@ table, th, td {
  * 1. Alle Beiträge aus der Datenbank laden !DONE!
  * 2. 10(?) Beiträge pro Seite Laden !DONE!
  * 3. Pagination unten einbinden !DONE!
- * 4. Buttons pro Beitrag: Bearbeiten, Löschen !Funktion einbinden!
- * 5. Löschen Funktion ist fertig, nur noch richtig einbinden !TODO!
+ * 4. Buttons pro Beitrag: Bearbeiten, Löschen !DONE!
+ * 5. Löschen Funktion ist fertig, nur noch richtig einbinden !DONE! gibt Fehler aus obwohl Funktion erfolgreich durchläuft
  * 6. Bearbeiten --> angepasste Post/Article Seite weiterleiten wo der Text drinsteht !TODO!
+ * DANACH: MENU fertig machen
  */
 
  require_once '../db/db.php';
@@ -81,7 +82,7 @@ for($i=1; $i <= $sql_erg; $i++){
       echo $counter."<br>";
       echo $view_post."<br>";
  
-      echo '<form action="  " method="post" enctype="multipart/form-data">';
+      
       echo '<table>';
       for($i=$counter; $i > $view_post; $i--){
           if($i <= 0) break;
@@ -110,16 +111,23 @@ for($i=1; $i <= $sql_erg; $i++){
 echo '<tr>';
 echo '<th>'.$headline.'</th>';
 //Weiterleitung zur Bearbeitung
-echo '<th> <button type="submit" name="action" value="0">Bearbeiten </button> </th>'; 
+$redirection = '"post.php?b_id='.$b_id.'"';
+//$redirection = '"https://google.de/"';
+echo '<form action='.$redirection.'method="post" enctype="multipart/form-data">';
+echo '<th> <input type="submit" value="Bearbeiten"/> </th>'; 
+echo '</form>';
 //Weiterleitung zur Löschung und rückkehr zu view_all.php
-echo '<th> <button type="submit" name="action" value="0">Löschen </button> </th>';   
+$redirection = '"delete.php?b_id='.$b_id.'"';
+echo '<form action='.$redirection.' method="post" enctype="multipart/form-data">';
+echo '<th> <input type="submit" value="Löschen"/> </th>';   
+echo '</form>';  
+
 echo '</tr>';
-  
 
 }
 
 echo '</table>';
-echo '</form>';
+
 
 /**
  * Pagination
