@@ -15,18 +15,10 @@ require_once 'db/db.php';
            
             $b_id = $row['B_ID'];
 
-            $picture = $row['Bild'];
+          
             }
             
-            $sql = $db->prepare("SELECT B_ID, p_name from pictures where B_ID = ?");
-           // $sql->execute(array($_GET["b_id"])) or die("fehler");
-           $sql->execute(array($b_id)) or die("fehler");
-           $count_row = $sql->rowCount();
-
-           while($row = $sql->fetch()){
-            $picture = $row['p_name'];
-
-           }
+          
        
         //echo '<br>'.$B_ID;
         
@@ -54,6 +46,8 @@ echo '<div class="container">';
        * 2. Anzahl Carousel Indicators erstellen
        * 3. CarouselItem erstellen
        */
+
+
       echo '<div class="py-5">
         <div class="container">
           <div class="row">
@@ -63,9 +57,37 @@ echo '<div class="container">';
                   <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"> </li>
                   <li data-target="#carouselExampleIndicators" data-slide-to="1"> </li>
                   <li data-target="#carouselExampleIndicators" data-slide-to="2"> </li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="3"> </li>
                 </ol>
-                <div class="carousel-inner">
-                  <div class="carousel-item active"> <img class="d-block img-fluid w-100" src="uploads/'.$picture.'">
+                <div class="carousel-inner">';
+                
+       
+                $sql = $db->prepare("SELECT B_ID, p_name from pictures where B_ID = ?");
+                // $sql->execute(array($_GET["b_id"])) or die("fehler");
+                $sql->execute(array($b_id)) or die("fehler");
+                $count_row = $sql->rowCount();
+
+                $count = 0; //Zählvariable
+                while($row = $sql->fetch()){
+                 $picture = $row['p_name'];
+                 
+                 if($count == 0){
+                 echo '<div class="carousel-item active"> <img class="d-block img-fluid w-100" src="uploads/'.$picture.'">';
+                 }
+                else{
+                  echo '<div class="carousel-item"> <img class="d-block img-fluid w-100" src="uploads/'.$picture.'">';
+
+                }
+                 echo '<div class="carousel-caption">
+                   <h5 class="m-0">Carousel</h5>
+                   <p>with indicators</p>
+                 </div>
+               </div>';
+               $count++;
+                }
+
+            /*    
+               echo '<div class="carousel-item active"> <img class="d-block img-fluid w-100" src="uploads/'.$picture.'">
                     <div class="carousel-caption">
                       <h5 class="m-0">Carousel</h5>
                       <p>with indicators</p>
@@ -82,8 +104,10 @@ echo '<div class="container">';
                       <h5 class="m-0">Carousel</h5>
                       <p>with indicators</p>
                     </div>
-                  </div>
-                </div>
+                  </div>'
+               
+               */
+             echo '</div>
               </div>
             </div>
           </div>

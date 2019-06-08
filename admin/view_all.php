@@ -34,7 +34,7 @@ $sql->execute() or die("fehler");
   }
 
  
-$result_per_site = 3;
+$result_per_site = 10;
 $headline = null;
 
 /*
@@ -111,7 +111,7 @@ for($i=1; $i <= $sql_erg; $i++){
 echo '<tr>';
 echo '<th>'.$headline.'</th>';
 //Weiterleitung zur Bearbeitung
-$redirection = '"post.php?b_id='.$b_id.'"';
+$redirection = '"post_edit.php?b_id='.$b_id.'"';
 //$redirection = '"https://google.de/"';
 echo '<form action='.$redirection.'method="post" enctype="multipart/form-data">';
 echo '<th> <input type="submit" value="Bearbeiten"/> </th>'; 
