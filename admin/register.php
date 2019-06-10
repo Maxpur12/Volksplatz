@@ -6,7 +6,7 @@ session_start();
 if(!isset($_SESSION['userid'])) {
     header("HTTP/1.1 301 Moved Permanently");
     header('Location:login.php');
-    die('Bitte zuerst <a href="admin/login.php">einloggen</a>');
+    die('Bitte zuerst <a href="login.php">einloggen</a>');
 
 }
 
@@ -59,6 +59,7 @@ if(isset($_GET['register'])) {
 }
  
 if($showFormular) {
+    include ("header.php");
 ?>
 
 <form action="?register=1" method="post">
@@ -75,5 +76,6 @@ Passwort wiederholen:<br>
 </form>
  
 <?php
+include ('footer.php');
 } //Ende von if($showFormular)
 ?>

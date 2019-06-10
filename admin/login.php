@@ -14,7 +14,7 @@ if(isset($_GET['login'])){
         $_SESSION['userid'] = $user['id'];
         header("HTTP/1.1 301 Moved Permanently");
         header('Location:index.php');
-        die('Login erfolgreich! Weiter zu <a href="../index.php"> intern');
+        die('Login erfolgreich! Weiter zu <a href="index.php"> intern');
     } else{
         $errorMessage = "E-Mail oder Passwort war ungültig <br>";
     }

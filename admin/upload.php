@@ -1,6 +1,16 @@
 <?php
-require_once 'article.php';
+//require_once 'article.php';
 require_once '../db/db.php';
+
+
+session_start();
+if(!isset($_SESSION['userid'])) {
+    header("HTTP/1.1 301 Moved Permanently");
+    header('Location:login.php');
+    die('Bitte zuerst <a href="login.php">einloggen</a>');
+
+}
+
 
 class upload{
 

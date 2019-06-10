@@ -9,7 +9,18 @@ table, th, td {
 </style>
 </head>
 <body>
+
 <?php
+session_start();
+if(!isset($_SESSION['userid'])) {
+    header("HTTP/1.1 301 Moved Permanently");
+    header('Location:login.php');
+    die('Bitte zuerst <a href="login.php">einloggen</a>');
+
+}
+
+include ("header.php");
+
 /**
  * Ziel: Darstellung aller Beiträge tabellarisch mit mehrern Seiten
  * 1. Alle Beiträge aus der Datenbank laden !DONE!
@@ -34,7 +45,7 @@ $sql->execute() or die("fehler");
   }
 
  
-$result_per_site = 10;
+$result_per_site = 15;
 $headline = null;
 
 /*
@@ -172,6 +183,8 @@ echo ' <div class="py-5">';
   echo '</div>';
   echo '</div>';
   echo '</div>';
+
+  include ("footer.php");
 ?>
 
 

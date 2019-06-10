@@ -28,14 +28,12 @@
         
         </ul>
         <ul class="navbar-nav">
-          <li class="nav-item"> <a class="nav-link" href="#">
-              <i class="fa fa-twitter fa-fw"></i>
             </a> </li>
           <li class="nav-item"> <a class="nav-link" href="https://www.facebook.com/Volksplatz/">
               <i class="fa fa-facebook fa-fw"></i>
             </a> </li>
-          <li class="nav-item"> <a class="nav-link" href="#">
-              <i class="fa fa-slack fa-fw"></i>
+          <li class="nav-item"> <a class="nav-link" href="https://www.instagram.com/boa_borna_open_air_/">
+              <i class="fa fa-instagram fa-fw"></i>
             </a> </li>
         </ul>
       </div>

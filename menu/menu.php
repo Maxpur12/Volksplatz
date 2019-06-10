@@ -37,7 +37,7 @@ while($row = $sql_abfrage->fetch()){
     //Todo: If statement dropdown
    // echo "<br>".$erg." ".$erg2;
     echo '<li class="nav-item">';
-    echo '<a class="nav-link" href="#">'.$erg.'</a>';
+    echo '<a class="nav-link" href="index.php">'.$erg.'</a>';
     echo '</li>';
 }
 }
