@@ -16,10 +16,7 @@ class upload{
 
 private $picture;
 private $picture_tmp;
-public function __construct($pic, $pic_tmp){
-    $this->picture = $pic;
-    $this->picture_tmp = $pic_tmp;
-}
+
  
 public function picUpload($pic,$pic_tmp){
     $picture    = $pic;

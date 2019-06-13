@@ -1,6 +1,6 @@
 <?php
 require_once '../db/db.php';
-
+require_once 'User.php';
 
 session_start();
 if(!isset($_SESSION['userid'])) {
@@ -17,6 +17,8 @@ if(isset($_GET['register'])) {
     $passwort = $_POST['passwort'];
     $passwort2 = $_POST['passwort2'];
   
+
+
     if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         echo 'Bitte eine gültige E-Mail-Adresse eingeben<br>';
         $error = true;
@@ -30,7 +32,16 @@ if(isset($_GET['register'])) {
         $error = true;
     }
     
+    $newUser = new User($email, $passwort, $passwort2);
+
+
     //Überprüfe, dass die E-Mail-Adresse noch nicht registriert wurde
+    if(!$error){
+        $newUser->checkEmail( $db);
+        echo $error;
+    }
+   
+    /*
     if(!$error) { 
         $statement = $db->prepare("SELECT * FROM users WHERE email = :email");
         $result = $statement->execute(array('email' => $email));
@@ -41,8 +52,13 @@ if(isset($_GET['register'])) {
             $error = true;
         }    
     }
-    
+    */
     //Keine Fehler, wir können den Nutzer registrieren
+    if(!$error){
+        $newUser->register($db);
+    }
+    
+    /*
     if(!$error) {    
         $passwort_hash = password_hash($passwort, PASSWORD_DEFAULT);
         
@@ -56,6 +72,8 @@ if(isset($_GET['register'])) {
             echo 'Beim Abspeichern ist leider ein Fehler aufgetreten<br>';
         }
     } 
+
+    */
 }
  
 if($showFormular) {
