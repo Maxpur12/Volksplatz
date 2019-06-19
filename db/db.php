@@ -21,8 +21,7 @@ $db = new PDO('mysql:host='.$db_ip_address.';dbname='.$database , $db_user, $db_
 } catch(PDOException $e){
  
    print $e->getMessage();
-    die("<p>O NEIM, Schmusi wollte doch nur helfen, aber leider hat er die Seite kaputt gemacht. <br>
-    Schnell dem Schmusi 1 Blussi geben damit er den Fehler findet! </p>");
+    die("<p>Fehler beim Verbinden mit der Datenbank! Prüfen Sie ob die angegebenen Daten korrekt sind! </p>");
 
 }
 

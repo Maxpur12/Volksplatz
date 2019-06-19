@@ -1,0 +1,48 @@
+\hypertarget{showpost_8php}{}\section{D\+:/\+X\+A\+M\+P\+P/htdocs/\+G\+I\+T/\+Volksplatz/showpost.php File Reference}
+\label{showpost_8php}\index{D:/XAMPP/htdocs/GIT/Volksplatz/showpost.php@{D:/XAMPP/htdocs/GIT/Volksplatz/showpost.php}}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{view__all_8php_ac0971e25a4f61580752c758ef520f6b2}{if}}(isset(\$\+\_\+\+G\+ET\mbox{[}\char`\"{}b\+\_\+id\char`\"{}\mbox{]})) \mbox{\hyperlink{showpost_8php_a047170d6020a882807665812a27e2525}{\$sql}} = \$db-\/$>$prepare(\char`\"{}S\+E\+L\+E\+CT B\+\_\+\+ID,Headline,Text from beitrag where B\+\_\+\+ID = ?\char`\"{})
+\item 
+\mbox{\hyperlink{showpost_8php_a0074fdcf62116989383290ee4de5f453}{while}} ( \$row=\$sql-\/$>$fetch())
+\item 
+\mbox{\hyperlink{showpost_8php_aefc07295ada8690998f4eb11d3aa1b5e}{\$count\+\_\+row}} = \$sql-\/$>$row\+Count()
+\item 
+\mbox{\hyperlink{showpost_8php_af789423037bbc89dc7c850e761177570}{\$count}} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{showpost_8php_af789423037bbc89dc7c850e761177570}\label{showpost_8php_af789423037bbc89dc7c850e761177570}} 
+\index{showpost.php@{showpost.php}!\$count@{\$count}}
+\index{\$count@{\$count}!showpost.php@{showpost.php}}
+\subsubsection{\texorpdfstring{\$count}{$count}}
+{\footnotesize\ttfamily \$count = 0}
+
+\mbox{\Hypertarget{showpost_8php_aefc07295ada8690998f4eb11d3aa1b5e}\label{showpost_8php_aefc07295ada8690998f4eb11d3aa1b5e}} 
+\index{showpost.php@{showpost.php}!\$count\_row@{\$count\_row}}
+\index{\$count\_row@{\$count\_row}!showpost.php@{showpost.php}}
+\subsubsection{\texorpdfstring{\$count\_row}{$count\_row}}
+{\footnotesize\ttfamily \$count\+\_\+row = \$sql-\/$>$row\+Count()}
+
+\mbox{\Hypertarget{showpost_8php_a047170d6020a882807665812a27e2525}\label{showpost_8php_a047170d6020a882807665812a27e2525}} 
+\index{showpost.php@{showpost.php}!\$sql@{\$sql}}
+\index{\$sql@{\$sql}!showpost.php@{showpost.php}}
+\subsubsection{\texorpdfstring{\$sql}{$sql}}
+{\footnotesize\ttfamily \$sql = \$db-\/$>$prepare(\char`\"{}S\+E\+L\+E\+CT B\+\_\+\+ID,Headline,Text from beitrag where B\+\_\+\+ID = ?\char`\"{})}
+
+Laden des ausgewählten Beitrages inkl. hinterlegten Bilder \begin{DoxyAuthor}{Author}
+Max Stötzner
+\end{DoxyAuthor}
+
+\begin{DoxyEnumerate}
+\item Prüfen ob Bild vorhanden
+\item Anzahl Carousel Indicators erstellen
+\item Carousel\+Item erstellen 
+\end{DoxyEnumerate}\mbox{\Hypertarget{showpost_8php_a0074fdcf62116989383290ee4de5f453}\label{showpost_8php_a0074fdcf62116989383290ee4de5f453}} 
+\index{showpost.php@{showpost.php}!while@{while}}
+\index{while@{while}!showpost.php@{showpost.php}}
+\subsubsection{\texorpdfstring{while}{while}}
+{\footnotesize\ttfamily while(\$row=\$sql-\/$>$fetch())}
+

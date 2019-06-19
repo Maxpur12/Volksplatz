@@ -1,0 +1,76 @@
+\hypertarget{article_8php}{}\section{D\+:/\+X\+A\+M\+P\+P/htdocs/\+G\+I\+T/\+Volksplatz/admin/article.php File Reference}
+\label{article_8php}\index{D:/XAMPP/htdocs/GIT/Volksplatz/admin/article.php@{D:/XAMPP/htdocs/GIT/Volksplatz/admin/article.php}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{view__all_8php_ac0971e25a4f61580752c758ef520f6b2}{if}}(isset(\$\+\_\+\+G\+ET\mbox{[}\textquotesingle{}name\textquotesingle{}\mbox{]})) \mbox{\hyperlink{article_8php_ae43551f2fe671754d63f6ac76df2678a}{get\+Last\+ID}} (\$db)
+\item 
+\mbox{\hyperlink{view__all_8php_ac0971e25a4f61580752c758ef520f6b2}{if}}(\$button\+\_\+status) \mbox{\hyperlink{article_8php_a0c184a846de03589700bebfc63aec7ac}{get\+\_\+\+B\+\_\+\+ID}} (\$beitrag, \$database)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{view__all_8php_ac0971e25a4f61580752c758ef520f6b2}{if}}(!isset(\$\+\_\+\+S\+E\+S\+S\+I\+ON\mbox{[}\textquotesingle{}userid\textquotesingle{}\mbox{]})) \mbox{\hyperlink{article_8php_a238e6e54982a8ccc25883c572b4f5b9f}{\$article}} = \char`\"{}\char`\"{}
+\item 
+\mbox{\hyperlink{article_8php_a687ea7fcd78263867b5bd34ed56b6379}{\$head}} = \char`\"{}\char`\"{}
+\item 
+\mbox{\hyperlink{article_8php_a6a84acde87e05eb2ec8ca7d45fe7d0c1}{\$prev}} = \char`\"{}\char`\"{}
+\item 
+\mbox{\hyperlink{article_8php_a14d960637bc06d7414afcbf6a2bcfabf}{\$button\+\_\+status}} = \$\+\_\+\+P\+O\+ST\mbox{[}\textquotesingle{}submit\textquotesingle{}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{article_8php_a0c184a846de03589700bebfc63aec7ac}\label{article_8php_a0c184a846de03589700bebfc63aec7ac}} 
+\index{article.php@{article.php}!get\_B\_ID@{get\_B\_ID}}
+\index{get\_B\_ID@{get\_B\_ID}!article.php@{article.php}}
+\subsubsection{\texorpdfstring{get\_B\_ID()}{get\_B\_ID()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{view__all_8php_ac0971e25a4f61580752c758ef520f6b2}{if}} ( \$button\+\_\+status) get\+\_\+\+B\+\_\+\+ID (\begin{DoxyParamCaption}\item[{}]{\$beitrag,  }\item[{}]{\$database }\end{DoxyParamCaption})}
+
+Funktion um die B\+\_\+\+ID eines Beitrages in einer Datenbank herauszufinden Wird nicht verwendet 
+\begin{DoxyParams}{Parameters}
+{\em beitrag} & Text der in der Datenbank gesucht werden soll \\
+\hline
+{\em database} & Datenbank die nach \$beitrag durchsucht werden soll \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{article_8php_ae43551f2fe671754d63f6ac76df2678a}\label{article_8php_ae43551f2fe671754d63f6ac76df2678a}} 
+\index{article.php@{article.php}!getLastID@{getLastID}}
+\index{getLastID@{getLastID}!article.php@{article.php}}
+\subsubsection{\texorpdfstring{getLastID()}{getLastID()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{view__all_8php_ac0971e25a4f61580752c758ef520f6b2}{if}} (isset( \$\+\_\+\+G\+ET\mbox{[} \textquotesingle{}name\textquotesingle{}\mbox{]})) get\+Last\+ID (\begin{DoxyParamCaption}\item[{}]{\$db }\end{DoxyParamCaption})}
+
+Herausfinden der letzten Beitrags ID Das Löschen eines Beitrags führt dazu, dass der neuste erstellte Beitrag nicht die richtige Beitrags\+ID durch A\+U\+T\+O\+\_\+\+I\+N\+C\+R\+E\+M\+E\+NT erhällt. Mit dieser Funktion soll die letzte Beitrags\+ID ermittelt werden. Bsp.\+: Beitrag mit der ID = 5 wird gelöscht, ein neuer Beitrag erhält nicht die B\+\_\+\+ID = 5 sondern B\+\_\+\+ID = 6
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & Datenbank aus der Inhalt geladen werden soll \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{article_8php_a238e6e54982a8ccc25883c572b4f5b9f}\label{article_8php_a238e6e54982a8ccc25883c572b4f5b9f}} 
+\index{article.php@{article.php}!\$article@{\$article}}
+\index{\$article@{\$article}!article.php@{article.php}}
+\subsubsection{\texorpdfstring{\$article}{$article}}
+{\footnotesize\ttfamily \mbox{\hyperlink{view__all_8php_ac0971e25a4f61580752c758ef520f6b2}{if}} (!isset( \$\+\_\+\+S\+E\+S\+S\+I\+ON\mbox{[} \textquotesingle{}userid\textquotesingle{}\mbox{]})) \$article = \char`\"{}\char`\"{}}
+
+\mbox{\Hypertarget{article_8php_a14d960637bc06d7414afcbf6a2bcfabf}\label{article_8php_a14d960637bc06d7414afcbf6a2bcfabf}} 
+\index{article.php@{article.php}!\$button\_status@{\$button\_status}}
+\index{\$button\_status@{\$button\_status}!article.php@{article.php}}
+\subsubsection{\texorpdfstring{\$button\_status}{$button\_status}}
+{\footnotesize\ttfamily \$button\+\_\+status = \$\+\_\+\+P\+O\+ST\mbox{[}\textquotesingle{}submit\textquotesingle{}\mbox{]}}
+
+\mbox{\Hypertarget{article_8php_a687ea7fcd78263867b5bd34ed56b6379}\label{article_8php_a687ea7fcd78263867b5bd34ed56b6379}} 
+\index{article.php@{article.php}!\$head@{\$head}}
+\index{\$head@{\$head}!article.php@{article.php}}
+\subsubsection{\texorpdfstring{\$head}{$head}}
+{\footnotesize\ttfamily \$head = \char`\"{}\char`\"{}}
+
+\mbox{\Hypertarget{article_8php_a6a84acde87e05eb2ec8ca7d45fe7d0c1}\label{article_8php_a6a84acde87e05eb2ec8ca7d45fe7d0c1}} 
+\index{article.php@{article.php}!\$prev@{\$prev}}
+\index{\$prev@{\$prev}!article.php@{article.php}}
+\subsubsection{\texorpdfstring{\$prev}{$prev}}
+{\footnotesize\ttfamily \$prev = \char`\"{}\char`\"{}}
+

@@ -1,0 +1,47 @@
+\hypertarget{post__edit_8php}{}\section{D\+:/\+X\+A\+M\+P\+P/htdocs/\+G\+I\+T/\+Volksplatz/admin/post\+\_\+edit.php File Reference}
+\label{post__edit_8php}\index{D:/XAMPP/htdocs/GIT/Volksplatz/admin/post\_edit.php@{D:/XAMPP/htdocs/GIT/Volksplatz/admin/post\_edit.php}}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{view__all_8php_ac0971e25a4f61580752c758ef520f6b2}{if}}(!isset(\$\+\_\+\+S\+E\+S\+S\+I\+ON\mbox{[}\textquotesingle{}userid\textquotesingle{}\mbox{]})) \mbox{\hyperlink{post__edit_8php_aab49ff17e1868c1b827697652546d991}{\$sql}} = \$db-\/$>$prepare(\char`\"{}S\+E\+L\+E\+CT M\+AX(B\+\_\+\+ID) from beitrag\char`\"{})
+\item 
+\mbox{\hyperlink{showpost_8php_a0074fdcf62116989383290ee4de5f453}{while}}(\$row=\$sql-\/$>$fetch()) \mbox{\hyperlink{view__all_8php_ac0971e25a4f61580752c758ef520f6b2}{if}}(isset(\$\+\_\+\+G\+ET\mbox{[}\textquotesingle{}?P\+\_\+\+ID\textquotesingle{}\mbox{]})) \mbox{\hyperlink{view__all_8php_ac0971e25a4f61580752c758ef520f6b2}{if}}(empty(\$\+\_\+\+G\+ET\mbox{[}\textquotesingle{}b\+\_\+id\textquotesingle{}\mbox{]})) \mbox{\hyperlink{post__edit_8php_af8a1581e315d0050b1cb47595141d2da}{else}}
+\item 
+\mbox{\hyperlink{showpost_8php_a0074fdcf62116989383290ee4de5f453}{while}}(\$row=\$sql-\/$>$fetch()) \mbox{\hyperlink{post__edit_8php_a79eea928811ed14372640e5aff6d30a6}{\$redirection}} = \textquotesingle{}\char`\"{}post\+\_\+edit.\+php?b\+\_\+id=\textquotesingle{}.\$B\+\_\+\+I\+D.\textquotesingle{}\&?U\+P\+D\+A\+TE=1\char`\"{}\textquotesingle{}
+\item 
+\mbox{\hyperlink{post__edit_8php_ad9f0ace87466451425c3060bd8b7aa60}{while}} ( \$row=\$sql-\/$>$fetch()) = \$db-\/$>$prepare(\char`\"{}D\+E\+L\+E\+TE F\+R\+OM beitrag W\+H\+E\+RE B\+\_\+\+ID = ?\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{post__edit_8php_a79eea928811ed14372640e5aff6d30a6}\label{post__edit_8php_a79eea928811ed14372640e5aff6d30a6}} 
+\index{post\_edit.php@{post\_edit.php}!\$redirection@{\$redirection}}
+\index{\$redirection@{\$redirection}!post\_edit.php@{post\_edit.php}}
+\subsubsection{\texorpdfstring{\$redirection}{$redirection}}
+{\footnotesize\ttfamily \mbox{\hyperlink{showpost_8php_a0074fdcf62116989383290ee4de5f453}{while}} ( \$row=\$sql-\/$>$fetch()) \$redirection = \textquotesingle{}\char`\"{}post\+\_\+edit.\+php?b\+\_\+id=\textquotesingle{}.\$B\+\_\+\+I\+D.\textquotesingle{}\&?U\+P\+D\+A\+TE=1\char`\"{}\textquotesingle{}}
+
+\mbox{\Hypertarget{post__edit_8php_aab49ff17e1868c1b827697652546d991}\label{post__edit_8php_aab49ff17e1868c1b827697652546d991}} 
+\index{post\_edit.php@{post\_edit.php}!\$sql@{\$sql}}
+\index{\$sql@{\$sql}!post\_edit.php@{post\_edit.php}}
+\subsubsection{\texorpdfstring{\$sql}{$sql}}
+{\footnotesize\ttfamily \mbox{\hyperlink{view__all_8php_ac0971e25a4f61580752c758ef520f6b2}{if}} (isset( \$\+\_\+\+G\+ET\mbox{[}\textquotesingle{}?U\+P\+D\+A\+TE\textquotesingle{}\mbox{]})) \$sql = \$db-\/$>$prepare(\char`\"{}S\+E\+L\+E\+CT M\+AX(B\+\_\+\+ID) from beitrag\char`\"{})}
+
+T\+E\+X\+TE A\+K\+T\+U\+A\+L\+I\+S\+I\+E\+R\+E\+N\+T\+E\+X\+TE A\+K\+T\+U\+A\+L\+I\+S\+I\+E\+R\+EN E\+N\+D\+E\+Beitrag laden \mbox{\Hypertarget{post__edit_8php_af8a1581e315d0050b1cb47595141d2da}\label{post__edit_8php_af8a1581e315d0050b1cb47595141d2da}} 
+\index{post\_edit.php@{post\_edit.php}!else@{else}}
+\index{else@{else}!post\_edit.php@{post\_edit.php}}
+\subsubsection{\texorpdfstring{else}{else}}
+{\footnotesize\ttfamily \mbox{\hyperlink{showpost_8php_a0074fdcf62116989383290ee4de5f453}{while}} ( \$row=\$sql-\/$>$fetch()) \mbox{\hyperlink{view__all_8php_ac0971e25a4f61580752c758ef520f6b2}{if}} (isset( \$\+\_\+\+G\+ET\mbox{[}\textquotesingle{}?P\+\_\+\+ID\textquotesingle{}\mbox{]})) \mbox{\hyperlink{view__all_8php_ac0971e25a4f61580752c758ef520f6b2}{if}} (empty( \$\+\_\+\+G\+ET\mbox{[} \textquotesingle{}b\+\_\+id\textquotesingle{}\mbox{]})) else}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  \$B\_ID = \$\_GET[\textcolor{stringliteral}{'b\_id'}]}
+
+\end{DoxyCode}
+B\+I\+LD LÖ\+S\+C\+H\+E\+N\+B\+I\+LD LÖ\+S\+C\+H\+EN E\+N\+DE \mbox{\Hypertarget{post__edit_8php_ad9f0ace87466451425c3060bd8b7aa60}\label{post__edit_8php_ad9f0ace87466451425c3060bd8b7aa60}} 
+\index{post\_edit.php@{post\_edit.php}!while@{while}}
+\index{while@{while}!post\_edit.php@{post\_edit.php}}
+\subsubsection{\texorpdfstring{while}{while}}
+{\footnotesize\ttfamily while = \$db-\/$>$prepare(\char`\"{}D\+E\+L\+E\+TE F\+R\+OM beitrag W\+H\+E\+RE B\+\_\+\+ID = ?\char`\"{})}
+
+Prüfen ob Bilder bei darauffolgenden Beiträgen vorhanden sind Anschließend Bilder aktualisieren\+Beitrag löschen 

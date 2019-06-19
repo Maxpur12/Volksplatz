@@ -1,0 +1,105 @@
+\hypertarget{class_user}{}\section{User Class Reference}
+\label{class_user}\index{User@{User}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_user_ace624806395273a85744163491e1b0a3}{\+\_\+\+\_\+construct}} (\$email, \$passwort, \$passwort2)
+\item 
+\mbox{\hyperlink{class_user_a24ada5decce3d1b79cd82f5a90ccf404}{get\+Error}} ()
+\item 
+\mbox{\hyperlink{class_user_a893a2fdb4d7e695912f02cf441d4c763}{check\+Email}} ( \$db)
+\item 
+\mbox{\hyperlink{class_user_a6a8d68e8d287e4af4be677b9b4849bb5}{register}} ( \$db)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_user_aeba2ab722cedda53dbb7ec1a59f45550}{\$error}} = false
+\item 
+\mbox{\hyperlink{class_user_ad634f418b20382e2802f80532d76d3cd}{\$email}}
+\item 
+\mbox{\hyperlink{class_user_aed302058273cfadf08c1752978ecbaf5}{\$passwort}}
+\item 
+\mbox{\hyperlink{class_user_a58d2858d5497e74ccacc622be54c23d4}{\$passwort2}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_user_ace624806395273a85744163491e1b0a3}\label{class_user_ace624806395273a85744163491e1b0a3}} 
+\index{User@{User}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!User@{User}}
+\subsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$email,  }\item[{}]{\$passwort,  }\item[{}]{\$passwort2 }\end{DoxyParamCaption})}
+
+Konstruktor der Klasse \mbox{\hyperlink{class_user}{User}} 
+\begin{DoxyParams}{Parameters}
+{\em email} & E-\/\+Mail Adresse des Nutzers \\
+\hline
+{\em passwort} & Passwort des Nutzers \\
+\hline
+{\em passwort2} & Bestätigung des Passworts des Nutzers \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_user_a893a2fdb4d7e695912f02cf441d4c763}\label{class_user_a893a2fdb4d7e695912f02cf441d4c763}} 
+\index{User@{User}!checkEmail@{checkEmail}}
+\index{checkEmail@{checkEmail}!User@{User}}
+\subsubsection{\texorpdfstring{checkEmail()}{checkEmail()}}
+{\footnotesize\ttfamily check\+Email (\begin{DoxyParamCaption}\item[{}]{\$db }\end{DoxyParamCaption})}
+
+Überprüft ob die eingegbene E-\/\+Mail Adresse bereits in der Datenbank vorhanden ist 
+\begin{DoxyParams}{Parameters}
+{\em db} & Datenbank aus der Abgefragt werden soll \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_user_a24ada5decce3d1b79cd82f5a90ccf404}\label{class_user_a24ada5decce3d1b79cd82f5a90ccf404}} 
+\index{User@{User}!getError@{getError}}
+\index{getError@{getError}!User@{User}}
+\subsubsection{\texorpdfstring{getError()}{getError()}}
+{\footnotesize\ttfamily get\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_user_a6a8d68e8d287e4af4be677b9b4849bb5}\label{class_user_a6a8d68e8d287e4af4be677b9b4849bb5}} 
+\index{User@{User}!register@{register}}
+\index{register@{register}!User@{User}}
+\subsubsection{\texorpdfstring{register()}{register()}}
+{\footnotesize\ttfamily register (\begin{DoxyParamCaption}\item[{}]{\$db }\end{DoxyParamCaption})}
+
+Der \mbox{\hyperlink{class_user}{User}} wird mit E-\/\+Mail Adresse und Passwort in die Datenbank eingetragen 
+\begin{DoxyParams}{Parameters}
+{\em db} & Datenbank in die Eingetragen werden soll \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{class_user_ad634f418b20382e2802f80532d76d3cd}\label{class_user_ad634f418b20382e2802f80532d76d3cd}} 
+\index{User@{User}!\$email@{\$email}}
+\index{\$email@{\$email}!User@{User}}
+\subsubsection{\texorpdfstring{\$email}{$email}}
+{\footnotesize\ttfamily \$email\hspace{0.3cm}{\ttfamily [private]}}
+
+E-\/\+Mail Adresse des Nutzers \mbox{\Hypertarget{class_user_aeba2ab722cedda53dbb7ec1a59f45550}\label{class_user_aeba2ab722cedda53dbb7ec1a59f45550}} 
+\index{User@{User}!\$error@{\$error}}
+\index{\$error@{\$error}!User@{User}}
+\subsubsection{\texorpdfstring{\$error}{$error}}
+{\footnotesize\ttfamily \$error = false\hspace{0.3cm}{\ttfamily [private]}}
+
+Fehlervariable, schaltet um wenn eine eine Bedingung nicht erfüllt wurde \mbox{\Hypertarget{class_user_aed302058273cfadf08c1752978ecbaf5}\label{class_user_aed302058273cfadf08c1752978ecbaf5}} 
+\index{User@{User}!\$passwort@{\$passwort}}
+\index{\$passwort@{\$passwort}!User@{User}}
+\subsubsection{\texorpdfstring{\$passwort}{$passwort}}
+{\footnotesize\ttfamily \$passwort\hspace{0.3cm}{\ttfamily [private]}}
+
+Passwort des Nutzers \mbox{\Hypertarget{class_user_a58d2858d5497e74ccacc622be54c23d4}\label{class_user_a58d2858d5497e74ccacc622be54c23d4}} 
+\index{User@{User}!\$passwort2@{\$passwort2}}
+\index{\$passwort2@{\$passwort2}!User@{User}}
+\subsubsection{\texorpdfstring{\$passwort2}{$passwort2}}
+{\footnotesize\ttfamily \$passwort2\hspace{0.3cm}{\ttfamily [private]}}
+
+Bestätigung des Passwort des Nutzers 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+X\+A\+M\+P\+P/htdocs/\+G\+I\+T/\+Volksplatz/admin/\mbox{\hyperlink{_user_8php}{User.\+php}}\end{DoxyCompactItemize}

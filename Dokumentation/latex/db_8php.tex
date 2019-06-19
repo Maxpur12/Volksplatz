@@ -1,0 +1,76 @@
+\hypertarget{db_8php}{}\section{D\+:/\+X\+A\+M\+P\+P/htdocs/\+G\+I\+T/\+Volksplatz/db/db.php File Reference}
+\label{db_8php}\index{D:/XAMPP/htdocs/GIT/Volksplatz/db/db.php@{D:/XAMPP/htdocs/GIT/Volksplatz/db/db.php}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+catch(P\+D\+O\+Exception \$e) \mbox{\hyperlink{db_8php_af2d378e5cc400f87ff7c02e698d518fd}{get\+DB}} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{db_8php_af43570666274607643a164642186da21}{\$db\+\_\+ip\+\_\+address}} = \char`\"{}localhost\char`\"{}
+\item 
+\mbox{\hyperlink{db_8php_a6a2ff59abacecba75a151826de414a27}{\$db\+\_\+user}} = \char`\"{}root\char`\"{}
+\item 
+\mbox{\hyperlink{db_8php_a2962c2bda65ca19dd4dd12d7160f1bf8}{\$db\+\_\+password}} = \char`\"{}\char`\"{}
+\item 
+\mbox{\hyperlink{db_8php_a7691c0162d89de0b6ba47edcd8ba8878}{\$database}} = \char`\"{}volksplatz\char`\"{}
+\item 
+\mbox{\hyperlink{db_8php_a1fa3127fc82f96b1436d871ef02be319}{\$db}}
+\item 
+\mbox{\hyperlink{db_8php_abe4cc9788f52e49485473dc699537388}{try}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{db_8php_af2d378e5cc400f87ff7c02e698d518fd}\label{db_8php_af2d378e5cc400f87ff7c02e698d518fd}} 
+\index{db.php@{db.php}!getDB@{getDB}}
+\index{getDB@{getDB}!db.php@{db.php}}
+\subsubsection{\texorpdfstring{getDB()}{getDB()}}
+{\footnotesize\ttfamily catch (P\+D\+O\+Exception \$e) get\+DB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{db_8php_a7691c0162d89de0b6ba47edcd8ba8878}\label{db_8php_a7691c0162d89de0b6ba47edcd8ba8878}} 
+\index{db.php@{db.php}!\$database@{\$database}}
+\index{\$database@{\$database}!db.php@{db.php}}
+\subsubsection{\texorpdfstring{\$database}{$database}}
+{\footnotesize\ttfamily \$database = \char`\"{}volksplatz\char`\"{}}
+
+\mbox{\Hypertarget{db_8php_a1fa3127fc82f96b1436d871ef02be319}\label{db_8php_a1fa3127fc82f96b1436d871ef02be319}} 
+\index{db.php@{db.php}!\$db@{\$db}}
+\index{\$db@{\$db}!db.php@{db.php}}
+\subsubsection{\texorpdfstring{\$db}{$db}}
+{\footnotesize\ttfamily \$db}
+
+\mbox{\Hypertarget{db_8php_af43570666274607643a164642186da21}\label{db_8php_af43570666274607643a164642186da21}} 
+\index{db.php@{db.php}!\$db\_ip\_address@{\$db\_ip\_address}}
+\index{\$db\_ip\_address@{\$db\_ip\_address}!db.php@{db.php}}
+\subsubsection{\texorpdfstring{\$db\_ip\_address}{$db\_ip\_address}}
+{\footnotesize\ttfamily \$db\+\_\+ip\+\_\+address = \char`\"{}localhost\char`\"{}}
+
+\mbox{\Hypertarget{db_8php_a2962c2bda65ca19dd4dd12d7160f1bf8}\label{db_8php_a2962c2bda65ca19dd4dd12d7160f1bf8}} 
+\index{db.php@{db.php}!\$db\_password@{\$db\_password}}
+\index{\$db\_password@{\$db\_password}!db.php@{db.php}}
+\subsubsection{\texorpdfstring{\$db\_password}{$db\_password}}
+{\footnotesize\ttfamily \$db\+\_\+password = \char`\"{}\char`\"{}}
+
+\mbox{\Hypertarget{db_8php_a6a2ff59abacecba75a151826de414a27}\label{db_8php_a6a2ff59abacecba75a151826de414a27}} 
+\index{db.php@{db.php}!\$db\_user@{\$db\_user}}
+\index{\$db\_user@{\$db\_user}!db.php@{db.php}}
+\subsubsection{\texorpdfstring{\$db\_user}{$db\_user}}
+{\footnotesize\ttfamily \$db\+\_\+user = \char`\"{}root\char`\"{}}
+
+\mbox{\Hypertarget{db_8php_abe4cc9788f52e49485473dc699537388}\label{db_8php_abe4cc9788f52e49485473dc699537388}} 
+\index{db.php@{db.php}!try@{try}}
+\index{try@{try}!db.php@{db.php}}
+\subsubsection{\texorpdfstring{try}{try}}
+{\footnotesize\ttfamily try}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\mbox{\hyperlink{db_8php_a1fa3127fc82f96b1436d871ef02be319}{\$db}} = \textcolor{keyword}{new} PDO(\textcolor{stringliteral}{'mysql:host='}.\mbox{\hyperlink{db_8php_af43570666274607643a164642186da21}{\$db\_ip\_address}}.\textcolor{stringliteral}{';dbname='}.\mbox{\hyperlink{db_8php_a7691c0162d89de0b6ba47edcd8ba8878}{\$database}} , \mbox{\hyperlink{db_8php_a6a2ff59abacecba75a151826de414a27}{\$db\_user}}, \mbox{\hyperlink{db_8php_a2962c2bda65ca19dd4dd12d7160f1bf8}{\$db\_password}})}
+
+\end{DoxyCode}

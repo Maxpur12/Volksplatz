@@ -1,0 +1,90 @@
+\hypertarget{show_8php}{}\section{D\+:/\+X\+A\+M\+P\+P/htdocs/\+G\+I\+T/\+Volksplatz/show.php File Reference}
+\label{show_8php}\index{D:/XAMPP/htdocs/GIT/Volksplatz/show.php@{D:/XAMPP/htdocs/GIT/Volksplatz/show.php}}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{show_8php_a047170d6020a882807665812a27e2525}{\$sql}} = \$db-\/$>$prepare(\char`\"{}S\+E\+L\+E\+CT M\+AX(B\+\_\+\+ID) from beitrag\char`\"{})
+\item 
+\mbox{\hyperlink{show_8php_a719624ae2e05a123335f853fbbeefe29}{\$headline}} = null
+\item 
+\mbox{\hyperlink{show_8php_a0337b146b90f6335d6c314969231b310}{\$preview}} = null
+\item 
+\mbox{\hyperlink{showpost_8php_a0074fdcf62116989383290ee4de5f453}{while}}(\$row=\$sql-\/$>$fetch()) \mbox{\hyperlink{show_8php_a7ef85f3a1ee9aa9e2840b2d071fd15b5}{\$result\+\_\+per\+\_\+site}} = 3
+\item 
+\mbox{\hyperlink{show_8php_a75dd972125f47d333492e70523d1aa6a}{\$total\+\_\+pages}} = ceil(\$total\+\_\+post/\$result\+\_\+per\+\_\+site)
+\item 
+\mbox{\hyperlink{view__all_8php_ac0971e25a4f61580752c758ef520f6b2}{if}}(empty(\$\+\_\+\+G\+ET\mbox{[}\textquotesingle{}seite\+\_\+nr\textquotesingle{}\mbox{]})) \mbox{\hyperlink{show_8php_a15763ab84c36ab79512146d33738c5f5}{else}}
+\item 
+\mbox{\hyperlink{view__all_8php_ac0971e25a4f61580752c758ef520f6b2}{if}}(is\+\_\+numeric(\$page)==false) \mbox{\hyperlink{view__all_8php_ac0971e25a4f61580752c758ef520f6b2}{if}}(\$page $>$ \$total\+\_\+pages) \mbox{\hyperlink{show_8php_a9380be99504e80c93a61c79bf95ca7c5}{\$counter}} = \$total\+\_\+post -\/ (\$page $\ast$ \$result\+\_\+per\+\_\+site -\/ (\$result\+\_\+per\+\_\+site))
+\item 
+\mbox{\hyperlink{show_8php_a5b99fdb1a492e115a7192ca90bc4c455}{\$view\+\_\+post}} = \$total\+\_\+post -\/ (\$page $\ast$ \$result\+\_\+per\+\_\+site)
+\item 
+\mbox{\hyperlink{show_8php_a80c68fef22aea95c13a63061dcbb9e25}{for}} ( \$i=\$counter;\$i $>$ \$view\+\_\+post;\$i-\/-\/)
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{show_8php_a9380be99504e80c93a61c79bf95ca7c5}\label{show_8php_a9380be99504e80c93a61c79bf95ca7c5}} 
+\index{show.php@{show.php}!\$counter@{\$counter}}
+\index{\$counter@{\$counter}!show.php@{show.php}}
+\subsubsection{\texorpdfstring{\$counter}{$counter}}
+{\footnotesize\ttfamily \mbox{\hyperlink{view__all_8php_ac0971e25a4f61580752c758ef520f6b2}{if}} (is\+\_\+numeric( \$page)==false) \mbox{\hyperlink{view__all_8php_ac0971e25a4f61580752c758ef520f6b2}{if}} ( \$page $>$ \$total\+\_\+pages) \$counter = \$total\+\_\+post -\/ (\$page $\ast$ \$result\+\_\+per\+\_\+site -\/ (\$result\+\_\+per\+\_\+site))}
+
+\mbox{\Hypertarget{show_8php_a719624ae2e05a123335f853fbbeefe29}\label{show_8php_a719624ae2e05a123335f853fbbeefe29}} 
+\index{show.php@{show.php}!\$headline@{\$headline}}
+\index{\$headline@{\$headline}!show.php@{show.php}}
+\subsubsection{\texorpdfstring{\$headline}{$headline}}
+{\footnotesize\ttfamily \$headline = null}
+
+\mbox{\Hypertarget{show_8php_a0337b146b90f6335d6c314969231b310}\label{show_8php_a0337b146b90f6335d6c314969231b310}} 
+\index{show.php@{show.php}!\$preview@{\$preview}}
+\index{\$preview@{\$preview}!show.php@{show.php}}
+\subsubsection{\texorpdfstring{\$preview}{$preview}}
+{\footnotesize\ttfamily \$preview = null}
+
+\mbox{\Hypertarget{show_8php_a7ef85f3a1ee9aa9e2840b2d071fd15b5}\label{show_8php_a7ef85f3a1ee9aa9e2840b2d071fd15b5}} 
+\index{show.php@{show.php}!\$result\_per\_site@{\$result\_per\_site}}
+\index{\$result\_per\_site@{\$result\_per\_site}!show.php@{show.php}}
+\subsubsection{\texorpdfstring{\$result\_per\_site}{$result\_per\_site}}
+{\footnotesize\ttfamily \mbox{\hyperlink{showpost_8php_a0074fdcf62116989383290ee4de5f453}{while}} ( \$row=\$sql-\/$>$fetch()) \$result\+\_\+per\+\_\+site = 3}
+
+Wie viele Beiträge pro Seite erscheinen sollen \mbox{\Hypertarget{show_8php_a047170d6020a882807665812a27e2525}\label{show_8php_a047170d6020a882807665812a27e2525}} 
+\index{show.php@{show.php}!\$sql@{\$sql}}
+\index{\$sql@{\$sql}!show.php@{show.php}}
+\subsubsection{\texorpdfstring{\$sql}{$sql}}
+{\footnotesize\ttfamily \$sql = \$db-\/$>$prepare(\char`\"{}S\+E\+L\+E\+CT M\+AX(B\+\_\+\+ID) from beitrag\char`\"{})}
+
+Alle Beiträge anzeigen, Beiträge werden gesplittet \begin{DoxyAuthor}{Author}
+Max Stötzner 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{show_8php_a75dd972125f47d333492e70523d1aa6a}\label{show_8php_a75dd972125f47d333492e70523d1aa6a}} 
+\index{show.php@{show.php}!\$total\_pages@{\$total\_pages}}
+\index{\$total\_pages@{\$total\_pages}!show.php@{show.php}}
+\subsubsection{\texorpdfstring{\$total\_pages}{$total\_pages}}
+{\footnotesize\ttfamily \$total\+\_\+pages = ceil(\$total\+\_\+post/\$result\+\_\+per\+\_\+site)}
+
+\mbox{\Hypertarget{show_8php_a5b99fdb1a492e115a7192ca90bc4c455}\label{show_8php_a5b99fdb1a492e115a7192ca90bc4c455}} 
+\index{show.php@{show.php}!\$view\_post@{\$view\_post}}
+\index{\$view\_post@{\$view\_post}!show.php@{show.php}}
+\subsubsection{\texorpdfstring{\$view\_post}{$view\_post}}
+{\footnotesize\ttfamily \$view\+\_\+post = \$total\+\_\+post -\/ (\$page $\ast$ \$result\+\_\+per\+\_\+site)}
+
+\mbox{\Hypertarget{show_8php_a15763ab84c36ab79512146d33738c5f5}\label{show_8php_a15763ab84c36ab79512146d33738c5f5}} 
+\index{show.php@{show.php}!else@{else}}
+\index{else@{else}!show.php@{show.php}}
+\subsubsection{\texorpdfstring{else}{else}}
+{\footnotesize\ttfamily \mbox{\hyperlink{view__all_8php_ac0971e25a4f61580752c758ef520f6b2}{if}} (empty( \$\+\_\+\+G\+ET\mbox{[} \textquotesingle{}seite\+\_\+nr\textquotesingle{}\mbox{]})) else}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{        \$page = \$\_GET[\textcolor{stringliteral}{'seite\_nr'}]}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{show_8php_a80c68fef22aea95c13a63061dcbb9e25}\label{show_8php_a80c68fef22aea95c13a63061dcbb9e25}} 
+\index{show.php@{show.php}!for@{for}}
+\index{for@{for}!show.php@{show.php}}
+\subsubsection{\texorpdfstring{for}{for}}
+{\footnotesize\ttfamily for(\$i=1; \$i$<$=\$total\+\_\+pages;++\$i)}
+
+Beiträge laden und anzeigen\+Pagination/\+Seitennummerierung Anzeigen eines Vorschaubilds
